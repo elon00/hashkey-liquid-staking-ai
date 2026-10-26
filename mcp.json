@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-liquid-staking-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKSTAKE"
+      },
+      "tools": [
+        {
+          "name": "verify_hkstake_invariants",
+          "description": "Verifies deterministic invariants for HashKey Liquid Staking AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hkstake_action",
+          "description": "Executes authenticated DeFi state transition."
+        }
+      ]
+    }
+  }
+}
